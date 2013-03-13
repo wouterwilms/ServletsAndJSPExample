@@ -39,10 +39,18 @@
 
 	</servlet>
 
-	<!-- Deze parameter kan in elke servlet worden aangesproken met this.getServletContext.getInitParameter("opleidingsCentrum") -->
+	<!-- Deze parameter kan in elke servlet worden aangesproken met this.getServletContext.getInitParameter("opleidingsCentrum") 
+		of rechtstreeks in een JSP met ${initParam.opleidingsCentrum} -->
 	<context-param>
 		<param-name>opleidingsCentrum</param-name>
 		<param-value>INTEC Brussel</param-value>
+	</context-param>
+
+	<!-- Deze parameter kan in elke servlet worden aangesproken met this.getServletContext.getInitParameter("opleidingsCentrum") 
+		of rechtstreeks in een JSP met ${initParam.cursus} -->
+	<context-param>
+		<param-name>cursus</param-name>
+		<param-value>Servlets en JSP</param-value>
 	</context-param>
 
 </web-app>

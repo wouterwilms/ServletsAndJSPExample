@@ -13,7 +13,8 @@
 
 <body>
 
-<h1>Voorbeeld Project</h1>
+<!--  ${initParam.cursus} spreekt rechtstreeks de servlet context initparamter cursus aan (zie DD)-->
+<h1>Voorbeeld Project : ${initParam.cursus}</h1>
 
 <ul>
 
@@ -60,6 +61,8 @@
 </li>
 
 </ul>
+
+<h1>${initParam.nieuwAttribuut}</h1>
 
 </body>
 

@@ -81,6 +81,8 @@ public class InitDestroyVoorbeeld extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		
+    	this.getServletContext().setInitParameter("nieuwAttribuut", "Ik ben een servlet context attribuut en ben zopas geset geweest door de doGet methode van InitDestroyVoorbeeld");
+
 		System.out.println("Dit is de initparameter uit de servlet context die " +
 				"het opleidingscentrum bevat : " + this.getServletContext().getInitParameter("opleidingsCentrum"));
 		
