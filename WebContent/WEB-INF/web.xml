@@ -1,10 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>ServletsAndJSPExampleProject</display-name>
-  <welcome-file-list>
-    <welcome-file>IndexServlet</welcome-file>
-  </welcome-file-list>
-  <session-config>
-    <session-timeout>1</session-timeout>
-  </session-config>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>ServletsAndJSPExampleProject</display-name>
+
+	<!-- Hiermee bepaal je de URL die wordt bezocht als je gewoon de domeinnaam 
+		van de website ingeeft in de adresbalk -->
+	<welcome-file-list>
+		<welcome-file>IndexServlet</welcome-file>
+	</welcome-file-list>
+
+	<!-- Hiermee kan de levensduur van de sessions bepalen in minuten. Dus als 
+		de gebruiker langer dan 100 minuten zijn session niet aanspreekt zal deze 
+		automatisch uit het werkgeheugen worden verwijderd -->
+	<session-config>
+		<session-timeout>100</session-timeout>
+	</session-config>
+
+	<servlet>
+
+		<servlet-name>initDestroyVoorbeeld</servlet-name>
+		<servlet-class>be.intecbrussel.servlets.InitDestroyVoorbeeld</servlet-class>
+
+		<!-- Deze parameter kan enkel worden aangesproken in de desbetreffende 
+			servlet met this.getInitParameter("cursus") -->
+		<init-param>
+			<param-name>cursus</param-name>
+			<param-value>Java : Servlets en JSP</param-value>
+		</init-param>
+
+		<!-- Deze parameter kan enkel worden aangesproken in de desbetreffende 
+			servlet met this.getInitParameter("aantalCursisten") -->
+		<init-param>
+			<param-name>aantalCursisten</param-name>
+			<param-value>6</param-value>
+		</init-param>
+
+	</servlet>
+
+	<!-- Deze parameter kan in elke servlet worden aangesproken met this.getServletContext.getInitParameter("opleidingsCentrum") -->
+	<context-param>
+		<param-name>opleidingsCentrum</param-name>
+		<param-value>INTEC Brussel</param-value>
+	</context-param>
+
 </web-app>

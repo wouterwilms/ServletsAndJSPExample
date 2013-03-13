@@ -23,10 +23,12 @@
 
 			<table border=1>
 
-				<th>Titel</th>
-				<th>Prijs</th>
-				<th>Score</th>
-				<th>Duur</th>
+				<tr>
+					<th>Titel</th>
+					<th>Prijs</th>
+					<th>Score</th>
+					<th>Duur</th>
+				</tr>
 
 				<c:forEach var="film" items="${voorstellingen}">
 
@@ -35,7 +37,7 @@
 						<td>${film.prijs} &dollar;</td>
 						<td>${film.score}</td>
 						<td>${film.duur} minuten</td>
-						<td><input type="submit" value="bestel" name="${film.titel}"</td>
+						<td><input type="submit" value="bestel" name="${film.titel}" /></td>
 					</tr>
 
 				</c:forEach>
@@ -58,10 +60,12 @@
 
 			<table border=1>
 
-				<th>Titel</th>
-				<th>Prijs</th>
-				<th>Score</th>
-				<th>Duur</th>
+				<tr>
+					<th>Titel</th>
+					<th>Prijs</th>
+					<th>Score</th>
+					<th>Duur</th>
+				</tr>
 
 				<c:forEach var="film" items="${bestellingen}">
 
@@ -71,7 +75,7 @@
 						<td>${film.score}</td>
 						<td>${film.duur} minuten</td>
 						<td><input type="submit" value="verwijder"
-							name="${film.titel}"</td>
+							name="${film.titel}" /></td>
 					</tr>
 
 				</c:forEach>

@@ -42,7 +42,7 @@
 </li>
 
 <li>
-<c:url var="sessions" value="/Sessions" />
+<c:url var="sessions" value="/Sessions"/>
 
 <a href="${sessions}">Sessions</a>
 </li>
@@ -51,6 +51,12 @@
 <c:url var="filmTickets" value="/FilmTicket"/>
 
 <a href="${filmTickets}">Film tickets</a>
+</li>
+
+<li>
+<c:url var="init" value="/InitDestroyVoorbeeld"/>
+
+<a href="${init}">init en destroy voorbeeld</a>
 </li>
 
 </ul>
