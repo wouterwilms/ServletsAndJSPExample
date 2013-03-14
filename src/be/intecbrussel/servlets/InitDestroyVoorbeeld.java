@@ -61,9 +61,13 @@ public class InitDestroyVoorbeeld extends HttpServlet {
     	
     	System.out.println("Field values after init method : \n De cursus is " + cursus + "\n Het aantal cursisten is " + aantalCursisten );
     	
-    	// Hier wordt een bestand aangemaakt in de WEB-INF folder
+    	// Hier wordt de ServletContext opgevraagd (dit object maakt het mogelijk om servlets te laten
+    	// communiceren met hun servlet container om er onder andere het path van op te vragen (zoals
+    	// hier wordt gedaan) maar je kan er ook attributen en init parameters in opslaan die dan in alle
+    	// servlets van de web app kunnen aangesproken worden.
     	ServletContext context = this.getServletContext();
     	
+    	// Hier wordt een bestand aangemaakt in de WEB-INF folder
     	File file = new File( context.getRealPath("/WEB-INF/eenTextBestand.txt"));
     	
     	try {
