@@ -60,6 +60,13 @@
 <a href="${init}">init en destroy voorbeeld</a>
 </li>
 
+<li>
+<c:url var="numberOfSessions" value="/NumberOfSessionsServlet"/>
+
+<a href="${numberOfSessions}">SessionListenerExample</a>
+
+</li>
+
 </ul>
 
 <h1>${initParam.nieuwAttribuut}</h1>
