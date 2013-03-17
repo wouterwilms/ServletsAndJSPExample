@@ -8,24 +8,16 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebFilter;
 
-@WebFilter("/voorbeeldFilter")
 public class VoorbeeldFilter implements Filter {
-
-    public VoorbeeldFilter() {
-
-    }
-
-	public void destroy() {
-
-	}
+	
+	private String attribuutTekst;
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
 		System.out.println("voorbeeldFilter is uitgevoerd");
 		
-		request.setAttribute("attributeByFilter", "The Filter has Set this request attribute");
+		request.setAttribute("attributeByFilter", attribuutTekst);
 		
 		chain.doFilter(request, response);
 	
@@ -33,6 +25,13 @@ public class VoorbeeldFilter implements Filter {
 
 	public void init(FilterConfig fConfig) throws ServletException {
 
+		attribuutTekst = fConfig.getInitParameter("attribuutTekst");
+		
+	}
+	
+	public void destroy() {
+
+		
 	}
 
 }
