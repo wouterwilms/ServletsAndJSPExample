@@ -61,6 +61,12 @@
 <a href="${cookieTestURL}">Heeft deze site een cookie geplaatst ?</a> 
 ${cookieWaarde}<c:if test="${not empty cookie.testCookie.value && not empty cookieWaarde}">  ...en nog eens de value : "${cookie.testCookie.value}"</c:if>
 
+<br/><br/>
+
+<c:url var="index" value="/IndexServlet"/>
+
+<a href="${index}">Home Page</a>
+
 </body>
 
 </html>

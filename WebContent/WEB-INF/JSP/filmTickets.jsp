@@ -86,5 +86,10 @@
 
 	</c:if>
 
+
+	<c:url var="index" value="/IndexServlet" />
+
+	<a href="${index}">Home Page</a>
+
 </body>
 </html>
