@@ -47,7 +47,11 @@
 
 <c:url var="invalidateSessionURL" value="/Invalidate"/>
 
-<a href="${invalidateSessionURL}">Verwijder de session !</a>
+<a href="${invalidateSessionURL}">Verwijder de session !</a><br/><br/>
+
+<c:url var="index" value="/IndexServlet"/>
+
+<a href="${index}">Home Page</a>
 
 </body>
 </html>

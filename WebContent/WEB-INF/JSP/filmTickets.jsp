@@ -34,7 +34,7 @@
 
 					<tr>
 						<td>${film.titel}</td>
-						<td>${film.prijs} &dollar;</td>
+						<td>${film.prijs} &#36;</td>
 						<td>${film.score}</td>
 						<td>${film.duur} minuten</td>
 						<td><input type="submit" value="bestel" name="${film.titel}" /></td>

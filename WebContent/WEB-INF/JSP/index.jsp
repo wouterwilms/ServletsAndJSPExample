@@ -67,6 +67,13 @@
 
 </li>
 
+<li>
+<c:url var="filter" value="/voorbeeldFilter"/>
+
+<a href="${filter}">Filter Voorbeeld</a>
+
+</li>
+
 </ul>
 
 <h1>${initParam.nieuwAttribuut}</h1>
