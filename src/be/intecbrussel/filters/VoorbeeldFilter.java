@@ -37,7 +37,7 @@ public class VoorbeeldFilter implements Filter {
 		
 		System.out.println(config.getFilterName() + " is " + hitCount + " maal uitgevoerd");
 		
-		request.setAttribute("attributeByFilter", attribuutTekst);
+		request.setAttribute("attributeByFilter", attribuutTekst + " " + hitCount);
 		
 		// Hiermee geef je de request en response door naar de volgende stap 
 		// in de FilterChain (ofwel een volgende filter ofwel de Servlet)

@@ -33,7 +33,7 @@
   	<filter-class>be.intecbrussel.filters.VoorbeeldFilter</filter-class>
   	<init-param>
   	<param-name>attribuutTekst</param-name>
-  	<param-value>Ik ben een request attribuut dat geset is door de VoorbeeldFilter</param-value>
+  	<param-value>Aantal hits voor filter1 :</param-value>
   	</init-param>
   	
   </filter>
