@@ -19,48 +19,63 @@
 <ul>
 
 <li>
+
 <c:url var="inleidingURL" value="/EenServletIsEenController"/>
 
 <a href="${inleidingURL}">Inleiding: een Servlet en een JSP</a> 
+
 </li>
 
 <li>
+
 <c:url var="formURL" value="/ToonEnVerwerkFormServlet"/>
 
 <a href="${formURL}">EL en een Form</a> 
+
 </li>
 
 <li>
+
 <c:url var="JSTLURL" value="/JSTLServlet"/>
 
 <a href="${JSTLURL}">JSTL </a> 
+
 </li>
 
 <li>
+
 <c:url var="requestAndCookieURL" value="/LesVijfServlet?eersteParameter=waardeVanEersteParameter&tweedeParameter=waardeVanTweedeParameter"/>
 
 <a href="${requestAndCookieURL}">RequestParameters en Cookies</a>
+
 </li>
 
 <li>
+
 <c:url var="sessions" value="/Sessions"/>
 
 <a href="${sessions}">Sessions</a>
+
 </li>
 
 <li>
+
 <c:url var="filmTickets" value="/FilmTicket"/>
 
 <a href="${filmTickets}">Film tickets</a>
+
 </li>
 
 <li>
+
 <c:url var="init" value="/InitDestroyVoorbeeld"/>
 
 <a href="${init}">init en destroy voorbeeld</a>
+
 </li>
 
 <li>
+
 <c:url var="numberOfSessions" value="/NumberOfSessionsServlet"/>
 
 <a href="${numberOfSessions}">SessionListenerExample</a>
@@ -68,9 +83,18 @@
 </li>
 
 <li>
+
 <c:url var="filter" value="/voorbeeldFilter"/>
 
 <a href="${filter}">Filter Voorbeeld</a>
+
+</li>
+
+<li>
+
+<c:url var="nullPointer" value="/NullPointerServlet"/>
+
+<a href="${nullPointer}">Throw a java.lang.NullPointerException</a>
 
 </li>
 
