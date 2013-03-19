@@ -98,6 +98,14 @@
 
 </li>
 
+<li>
+
+<c:url var="cursisten" value="/CursistServlet"/>
+
+<a href="${cursisten}">Toon al de cursisten</a>
+
+</li>
+
 </ul>
 
 <h1>${initParam.nieuwAttribuut}</h1>
