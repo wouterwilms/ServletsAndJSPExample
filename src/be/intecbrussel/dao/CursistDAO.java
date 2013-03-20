@@ -16,11 +16,20 @@ import java.util.ArrayList;
 import be.intecbrussel.entities.Cursist;
 
 public class CursistDAO {
-
+	
+	/*
+	 * De specifieke SQL queries declareer je best
+	 * bovenaan in je class als constanten. 
+	 */
 	private static final String FIND_ALL_SQL = "select * from cursist";
 
 	private static final String READ_SQL = "select * from cursist where idCursist = ?";
 	
+	/*
+	 * Elke DAO class die correspondeerd met een entity gaat 
+	 * gebruik maken van de DatabaseUtil dus maken we er een
+	 * final field voor.
+	 */
 	private final DatabaseUtil databaseUtil = new DatabaseUtil();
 
 	public ArrayList<Cursist> findAll() {
