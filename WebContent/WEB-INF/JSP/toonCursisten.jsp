@@ -1,7 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-    
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-     
+
 <!doctype html>
 <html>
 <head>
@@ -10,31 +11,35 @@
 </head>
 <body>
 
-<h1>De Cursisten</h1>
+	<h1>De Cursisten</h1>
 
-<table border = 1 >
+	<table border=1>
 
-<tr>
+		<tr>
 
-<th>ID</th>
-<th>Naam</th>
-<th>CursisNummer</th>
+			<th>ID</th>
+			<th>Naam</th>
+			<th>CursisNummer</th>
 
-</tr>
+		</tr>
 
-<c:forEach var="cursist" items="${cursisten}">
+		<c:forEach var="cursist" items="${cursisten}">
 
-<tr>
+			<tr>
 
-	<td>${cursist.idCursist}</td>
-	<td>${cursist.naam}</td>
-	<td>${cursist.cursisNummer}</td>
+				<td>${cursist.idCursist}</td>
+				<td>${cursist.naam}</td>
+				<td>${cursist.cursisNummer}</td>
 
-</tr>
+			</tr>
 
-</c:forEach>
+		</c:forEach>
 
-</table>
+	</table>
+
+	<c:url var="index" value="/IndexServlet" />
+
+	<a href="${index}">Home Page</a>
 
 </body>
 </html>

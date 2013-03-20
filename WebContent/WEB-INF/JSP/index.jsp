@@ -106,6 +106,14 @@
 
 </li>
 
+<li>
+
+<c:url var="UTF" value="/TextToUTF"/>
+
+<a href="${UTF}">Text to UTF-8 binairy printer</a>
+
+</li>
+
 </ul>
 
 <h1>${initParam.nieuwAttribuut}</h1>

@@ -93,7 +93,8 @@ public class SessionsServlet extends HttpServlet {
 			
 			}
 		
-		/* Om URL rewriting mogelijk te maken moet je de 'encodeRedirectURL' methode gebruiken
+		/* 
+		 * Om URL rewriting mogelijk te maken moet je de 'encodeRedirectURL' methode gebruiken
 		 * van het response object. Dan wordt de sessionid automatisch toegevoegd aan de URL van
 		 * zodra er een session aangemaakt is en er geen cookies aanvaard worden.
 		 * Met de 'getContextPath' methode van het request object bekom je de contextpath van je
