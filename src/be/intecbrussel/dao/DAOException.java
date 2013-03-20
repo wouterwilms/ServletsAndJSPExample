@@ -1,5 +1,5 @@
 /*
- * Bij het werken met een database kunnen exceptions optreden.
+ * Bij het communiceren met een database kunnen exceptions optreden.
  * In ons geval zijn dit exceptions van het type 'SQLException'.
  * Deze exceptions zullen onstaan in de DAO-layer van je applicatie.
  * Als je in de Servlet gebruik maakt van de DAO-layer en er
@@ -14,12 +14,12 @@
  * 
  * Om ervoor te zorgen dat de Servlet-layer onafhankelijk is van de
  * gekozen database bibliotheek moeten we een generische Exception 
- * opvangen. Het is deze Exception die in deze code is uitgeschreven.
+ * opvangen. Het is deze Exception die in dit .java bestand is uitgeschreven.
  * 
  * In de DAO-layer (deze is wel bibliotheek specifiek) vang je de 
  * SQLExceptions op waarna je in het catchblok een generische exception
  * 'DAOException' gooit. Zodoende kan de Servlet gewoon DAOExceptions 
- * catchen en niet die bibliotheek-specifieke SQL-Exceptions! 
+ * catchen en niet de bibliotheek-specifieke SQL-Exceptions! 
  */
 
 
@@ -29,7 +29,7 @@ public class DAOException extends RuntimeException {
 	
 	/*
 	 * RuntimeException is een Serializable class dus
-	 * moet je een constante SerialVersionUID meegeven.
+	 * moet* je een constante SerialVersionUID meegeven.
 	 * Deze constante dient als versienummer van de class.
 	 * Dit heeft zijn nut in volgend scenario:
 	 * 
@@ -44,6 +44,12 @@ public class DAOException extends RuntimeException {
 	 * 3. Als jij (of iemand anders) later de objecten uit de DB
 	 * probeert te importeren in de applicaties zal dit tegengehouden
 	 * worden omdat de serialVersionUID niet overeenkomt!
+	 * 
+	 * * In principe moet dit niet omdat Java ook een default 
+	 *   SerialversionUID kan aanmaken als dit niet door de 
+	 *   programmeur wordt aangemaakt. Maar het wordt aangeraden
+	 *   omdat default SerialVersionUID praktisch nooit het gewenste 
+	 *   resultaat zal geven.
 	 */
 	private static final long serialVersionUID = 1L;
 	

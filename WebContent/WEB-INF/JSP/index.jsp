@@ -116,6 +116,18 @@
 
 </ul>
 
+<ul>
+
+<li>
+
+<c:url var="SQL" value="/SQLTestDatabaseCursisten.sql"/>
+
+<a href="${SQL}">Download .sql script voor DB</a>
+
+</li>
+
+</ul>
+
 <h1>${initParam.nieuwAttribuut}</h1>
 
 </body>

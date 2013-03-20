@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<h1>De Cursisten</h1>
+	<h1>De Cursisten: opgehaald uit DB met be.intecbrussel.dao.CursistDAO.findAll()</h1>
 
 	<table border=1>
 
@@ -36,6 +36,34 @@
 		</c:forEach>
 
 	</table>
+	
+	<h1>De Cursisten: opgehaald uit DB met be.intecbrussel.dao.CursistDAO.read(int idCursist)</h1>
+	
+		<table border=1>
+
+		<tr>
+
+			<th>ID</th>
+			<th>Naam</th>
+			<th>CursisNummer</th>
+
+		</tr>
+
+		<c:forEach var="cursist" items="${cursistenTwee}">
+
+			<tr>
+
+				<td>${cursist.idCursist}</td>
+				<td>${cursist.naam}</td>
+				<td>${cursist.cursisNummer}</td>
+
+			</tr>
+
+		</c:forEach>
+
+	</table>
+	
+	<br/>
 
 	<c:url var="index" value="/IndexServlet" />
 
