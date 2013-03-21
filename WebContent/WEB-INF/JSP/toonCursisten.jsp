@@ -16,7 +16,7 @@
 
 	<h1>De Cursisten</h1>
 	
-	<h2>opgehaald uit DB met CursistDAO.findAll()</h2>
+	<h4>opgehaald uit DB met CursistDAO.findAll()</h4>
 
 	<table border=1>
 
