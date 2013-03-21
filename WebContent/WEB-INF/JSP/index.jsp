@@ -16,8 +16,14 @@
 
 <div class="center">
 
+<c:url var="avatar" value="/images/GitHubAvatar.png" />
+
+<c:url var="git" value="https://github.com/VanbockryckInstructeur/ServletsAndJSPExample" />
+
+<a href="${git}"><img src="${avatar}" alt="avatar" title="GitHub repo"/></a>
+
 <!--  ${initParam.cursus} spreekt rechtstreeks de servlet context initparamter cursus aan (zie DD)-->
-<h1>Voorbeeld Project : ${initParam.cursus}</h1>
+<h1>${initParam.cursus}</h1>
 
 <c:url var="inleidingURL" value="/EenServletIsEenController"/>
 
@@ -67,9 +73,11 @@
 
 <a href="${UTF}" class="button">Text to UTF-8 binairy printer</a>
 
+<br/>
+
 <c:url var="SQL" value="/SQLTestDatabaseCursisten.sql"/>
 
-<a href="${SQL}" class="button">Download .sql script voor DB</a>
+<a href="${SQL}" class="HPbutton">Download .sql script voor DB</a>
 
 <h1>${initParam.nieuwAttribuut}</h1>
 

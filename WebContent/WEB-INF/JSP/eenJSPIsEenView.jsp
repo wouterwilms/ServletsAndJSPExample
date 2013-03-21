@@ -2,22 +2,27 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html>
 
 <html>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styles/default.css">
 <title>Een JSP</title>
 </head>
 
 <body>
 
+<div class="center">
+
 <h1>${naamDieInJSPKanAangesprokenWorden} Java cursist!</h1>
 
 <c:url var="index" value="/IndexServlet"/>
 
-<a href="${index}">Home Page</a>
+<a class="HPbutton" href="${index}">Home Page</a>
+
+</div>
 
 </body>
 

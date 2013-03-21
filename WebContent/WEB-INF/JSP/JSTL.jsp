@@ -183,14 +183,14 @@ de eerste auto is een Ferrari !
 		<c:param name="tweedeParameter" value="Tweede" />
 	</c:url>
 
-	<a href="${eenURL}">LinkNaarRedirectServletDieTerugNaarHierRedirect!</a>
+	<a class="button" href="${eenURL}">Redirect Back !</a>
 
 	<br />
 	<br />
 
 	<c:url var="index" value="/IndexServlet" />
 
-	<a href="${index}">Home Page</a>
+	<a class="HPbotton" href="${index}">Home Page</a>
 
 </body>
 

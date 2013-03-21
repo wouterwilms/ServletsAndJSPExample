@@ -1,3 +1,13 @@
+body {
+	
+    background-color : #000000 ;
+    font-family : Calibri ;
+    font-size : 20px ;
+    color : #FFFFFF ;
+    text-align : center ;
+
+} 
+
 li.even {
 	
 	color : #006699 ;
@@ -12,7 +22,8 @@ li.oneven {
 
 h1 {
 	
-	color : #00628B ;	
+	font-family : Calibri ;
+	color : #FFFFFF ;	
 	margin-right : auto ;
 	text-align : center ;
 
@@ -21,18 +32,15 @@ h1 {
 
 .button {
 	
-	background-color : transparent ;
-	-moz-border-radius : 22px ;
-	-webkit-border-radius : 22px ;
-	border-radius : 22px ;
-	border : 2px solid #dcdcdc ;
-	color : #00628B ;
-	font-family : arial ;
-	font-size : 17px ;
-	font-weight : bold ;
+	background-color : #5195CE ;
+	-moz-border-radius : 15px ;
+	-webkit-border-radius : 15px ;
+	border-radius : 15px ;
+	border : 1px solid #FDFDFD ;
+	color : #FFFFFF ;
 	text-decoration : none ;
 	padding : 5px ;
-	width : 500px ;
+	width : 350px ;
 	display : block ;
 	margin-bottom : 5px ; 
 	margin-left : auto ;
@@ -50,7 +58,55 @@ h1 {
 
 .button:hover {
 	
-	background : #E6E6DC ;
+	background : #005DB3 ;
+	
+}
+
+.HPbutton {
+	
+	background-color : #AAAAAA ;
+	-moz-border-radius : 15px ;
+	-webkit-border-radius : 15px ;
+	border-radius : 15px ;
+	border : 1px solid #FDFDFD ;
+	color : #FFFFFF ;
+	text-decoration : none ;
+	padding : 5px ;
+	width : 350px ;
+	display : block ;
+	margin-bottom : 5px ; 
+	margin-left : auto ;
+ 	margin-right : auto ;
+	text-align : center ;	
+	
+}
+
+.HPbutton:active {
+	
+	position : relative;
+	top : 1px;
+	
+}
+
+.HPbutton:hover {
+	
+	background : #999999 ;
+	
+}
+
+.input {
+	
+	background-color : #EEEEEE ;
+	border : 1px solid #FDFDFD ;
+	color : #000000 ;
+	text-decoration : none ;
+	padding : 5px ;
+	width : 350px ;
+	display : block ;
+	margin-bottom : 5px ; 
+	margin-left : auto ;
+ 	margin-right : auto ;
+	text-align : center ;	
 	
 }
 
@@ -60,4 +116,24 @@ div.center {
 	margin-left : auto ;
  	margin-right : auto ;
 	
+}
+
+img  {
+	
+  border: 4px solid #E9E9EC ;
+  height: 100px ;
+  margin-left : auto ;
+  margin-right : auto ;
+  text-align : center ;
+  display : block ;
+  opacity : 0.8 ;
+  filter:alpha(opacity=80);
+  
+}
+  
+img:hover {
+  
+  opacity:1.0;
+  filter:alpha(opacity=100);
+
 }
