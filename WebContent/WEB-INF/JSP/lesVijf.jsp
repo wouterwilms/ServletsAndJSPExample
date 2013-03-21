@@ -8,6 +8,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styles/default.css">
 <title>Les Vijf</title>
 </head>
 
@@ -21,13 +22,11 @@
 
 <c:if test="${not empty headers}"><h2>De meegestuurde request headers waren</h2></c:if>
 
-<ul>
 <c:forEach var="eenHeaderName" items="${headers}">
 
 <li>${eenHeaderName} : ${header[eenHeaderName]}</li>
 
 </c:forEach>
-</ul>
 
 <h1>Een form met POST method</h1>
 
@@ -44,28 +43,28 @@
 <input type="hidden" name="eersteParameter" value="WaardeUitEersteHiddenInput"/>
 <input type="hidden" name="tweedeParameter" value="WaardeUitTweedeHiddenInput"/>
 
-<input type="submit" value="Stuur een POST request"/>
+<input class="button" type="submit" value="Stuur een POST request"/>
 
 </form>
 
 <c:if test="${! empty meerwaardigeParameter}"><h1>De aangevinkte opties!</h1></c:if>
 
-<ul>
 <c:forEach var="item" items="${meerwaardigeParameter}">
 <li>${item}</li>
 </c:forEach>
-</ul>
+
+<br/>
 
 <c:url var="cookieTestURL" value="/LeesCookieServlet"/>
 
-<a href="${cookieTestURL}">Heeft deze site een cookie geplaatst ?</a> 
+<a class="button" href="${cookieTestURL}">Heeft deze site een cookie geplaatst ?</a> 
 ${cookieWaarde}<c:if test="${not empty cookie.testCookie.value && not empty cookieWaarde}">  ...en nog eens de value : "${cookie.testCookie.value}"</c:if>
 
-<br/><br/>
+<br/>
 
 <c:url var="index" value="/IndexServlet"/>
 
-<a href="${index}">Home Page</a>
+<a class="HPbutton" href="${index}">Home Page</a>
 
 </body>
 

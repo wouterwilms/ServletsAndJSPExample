@@ -21,18 +21,18 @@
 
 <body>
 
+<div class="center">
+
 	<h2>
 		<c:out value="<c:forEach>" />
 		om over een verzameling itereren
 	</h2>
 
-	<ul>
 		<c:forEach var="instructeur" items="${instructeurs}">
 
 			<li>${instructeur}</li>
 
 		</c:forEach>
-	</ul>
 
 	<h2>Over een verzameling JavaBeans itereren</h2>
 
@@ -88,11 +88,11 @@
 
 	<h2>De forEach attributen 'begin', 'step' en 'end'</h2>
 
-	<ul>
+
 		<c:forEach begin="1" step="2" end="5">
 			<li>Herhaal dit</li>
 		</c:forEach>
-	</ul>
+
 
 	<h2>Het forEach attribuut 'varStatus'</h2>
 
@@ -130,8 +130,8 @@
 	</h2>
 
 	<c:if test="${'Ferrari' == collectie[0].merk}">
-de eerste auto is een Ferrari !
-</c:if>
+	de eerste auto is een Ferrari !
+	</c:if>
 
 	<h2>
 		<c:out value="<c:choose>" />
@@ -185,12 +185,13 @@ de eerste auto is een Ferrari !
 
 	<a class="button" href="${eenURL}">Redirect Back !</a>
 
-	<br />
-	<br />
-
+	<br/>
+	
 	<c:url var="index" value="/IndexServlet" />
 
-	<a class="HPbotton" href="${index}">Home Page</a>
+	<a class="HPbutton" href="${index}">Home Page</a>
+	
+	</div>
 
 </body>
 

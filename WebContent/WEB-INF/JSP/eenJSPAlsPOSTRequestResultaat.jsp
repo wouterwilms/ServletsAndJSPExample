@@ -8,13 +8,14 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="styles/default.css">
 <title>POST request resultaat</title>
 </head>
 <body>
 
 <h1>De doorgestuurde naam is : ${naam}</h1>
 
-<a href="ToonEnVerwerkFormServlet">Ga naar EenJSPMetEenForm</a>
+<a class="HPbutton" href="ToonEnVerwerkFormServlet">Ga naar EenJSPMetEenForm</a>
 
 </body>
 
