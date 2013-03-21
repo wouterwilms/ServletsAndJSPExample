@@ -26,10 +26,11 @@ class DatabaseUtil {
 	 * In deze contstante geef je de naam mee van het te zoeken object. (in dit
 	 * geval de naam van de datasource die we willen gaan gebruiken)
 	 * 
-	 * De volledige naam van onze datasource bestaat uit twee onderdelen : 1.
-	 * java:/comp/env Dit is de context van de website en dat is een verzameling
+	 * De volledige naam van onze datasource bestaat uit twee onderdelen : 
+	 * 1.java:/comp/env Dit is de context van de website en dat is een verzameling
 	 * resources die op de webserver te vinden is. Onze datasource is 1 van die
-	 * resources. 2. jdbc/ServletsAndJSPExampleProject : Dit is de naam van onze
+	 * resources. 
+	 * 2. jdbc/ServletsAndJSPExampleProject : Dit is de naam van onze
 	 * datasource, deze naam hebben we bepaald in context.xml in de folder
 	 * META-INF.
 	 * 
