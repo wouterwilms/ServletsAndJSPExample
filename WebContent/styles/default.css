@@ -1,7 +1,63 @@
 li.even {
-	color: #006699;
+	
+	color : #006699 ;
+	
 }
 
 li.oneven {
-	color: #009999;	
+	
+	color : #009999 ;
+	
+}
+
+h1 {
+	
+	color : #00628B ;	
+	margin-right : auto ;
+	text-align : center ;
+
+}
+
+
+.button {
+	
+	background-color : transparent ;
+	-moz-border-radius : 22px ;
+	-webkit-border-radius : 22px ;
+	border-radius : 22px ;
+	border : 2px solid #dcdcdc ;
+	color : #00628B ;
+	font-family : arial ;
+	font-size : 17px ;
+	font-weight : bold ;
+	text-decoration : none ;
+	padding : 5px ;
+	width : 500px ;
+	display : block ;
+	margin-bottom : 5px ; 
+	margin-left : auto ;
+ 	margin-right : auto ;
+	text-align : center ;
+	
+}
+
+.button:active {
+	
+	position : relative;
+	top : 1px;
+	
+}
+
+.button:hover {
+	
+	background : #E6E6DC ;
+	
+}
+
+div.center {
+	
+	width : 700px ;	
+	margin-left : auto ;
+ 	margin-right : auto ;
+	
 }

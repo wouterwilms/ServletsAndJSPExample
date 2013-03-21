@@ -2,133 +2,78 @@
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
         
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html>
 
 <html>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styles/default.css">
 <title>VoorbeelProject</title>
 </head>
 
 <body>
 
+<div class="center">
+
 <!--  ${initParam.cursus} spreekt rechtstreeks de servlet context initparamter cursus aan (zie DD)-->
 <h1>Voorbeeld Project : ${initParam.cursus}</h1>
 
-<ul>
-
-<li>
-
 <c:url var="inleidingURL" value="/EenServletIsEenController"/>
 
-<a href="${inleidingURL}">Inleiding: een Servlet en een JSP</a> 
-
-</li>
-
-<li>
+<a href="${inleidingURL}" class="button">Inleiding: een Servlet en een JSP</a> 
 
 <c:url var="formURL" value="/ToonEnVerwerkFormServlet"/>
 
-<a href="${formURL}">EL en een Form</a> 
-
-</li>
-
-<li>
+<a href="${formURL}" class="button">EL en een Form</a>
 
 <c:url var="JSTLURL" value="/JSTLServlet"/>
 
-<a href="${JSTLURL}">JSTL </a> 
-
-</li>
-
-<li>
+<a href="${JSTLURL}" class="button">JSTL </a>
 
 <c:url var="requestAndCookieURL" value="/LesVijfServlet?eersteParameter=waardeVanEersteParameter&tweedeParameter=waardeVanTweedeParameter"/>
 
-<a href="${requestAndCookieURL}">RequestParameters en Cookies</a>
-
-</li>
-
-<li>
+<a href="${requestAndCookieURL}" class="button">RequestParameters en Cookies</a>
 
 <c:url var="sessions" value="/Sessions"/>
 
-<a href="${sessions}">Sessions</a>
-
-</li>
-
-<li>
+<a href="${sessions}" class="button">Sessions</a>
 
 <c:url var="filmTickets" value="/FilmTicket"/>
 
-<a href="${filmTickets}">Film tickets</a>
-
-</li>
-
-<li>
+<a href="${filmTickets}" class="button">Film tickets</a>
 
 <c:url var="init" value="/InitDestroyVoorbeeld"/>
 
-<a href="${init}">init en destroy voorbeeld</a>
-
-</li>
-
-<li>
+<a href="${init}" class="button">init en destroy voorbeeld</a>
 
 <c:url var="numberOfSessions" value="/NumberOfSessionsServlet"/>
 
-<a href="${numberOfSessions}">SessionListenerExample</a>
-
-</li>
-
-<li>
+<a href="${numberOfSessions}" class="button">SessionListenerExample</a>
 
 <c:url var="filter" value="/voorbeeldFilter"/>
 
-<a href="${filter}">Filter Voorbeeld</a>
-
-</li>
-
-<li>
+<a href="${filter}" class="button">Filter Voorbeeld</a>
 
 <c:url var="nullPointer" value="/NullPointerServlet"/>
 
-<a href="${nullPointer}">Throw a java.lang.NullPointerException</a>
-
-</li>
-
-<li>
+<a href="${nullPointer}" class="button">Throw a java.lang.NullPointerException</a>
 
 <c:url var="cursisten" value="/CursistServlet"/>
 
-<a href="${cursisten}">Toon al de cursisten</a>
-
-</li>
-
-<li>
+<a href="${cursisten}" class="button">Toon al de cursisten</a>
 
 <c:url var="UTF" value="/TextToUTF"/>
 
-<a href="${UTF}">Text to UTF-8 binairy printer</a>
-
-</li>
-
-</ul>
-
-<ul>
-
-<li>
+<a href="${UTF}" class="button">Text to UTF-8 binairy printer</a>
 
 <c:url var="SQL" value="/SQLTestDatabaseCursisten.sql"/>
 
-<a href="${SQL}">Download .sql script voor DB</a>
-
-</li>
-
-</ul>
+<a href="${SQL}" class="button">Download .sql script voor DB</a>
 
 <h1>${initParam.nieuwAttribuut}</h1>
+
+</div>
 
 </body>
 
