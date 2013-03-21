@@ -124,6 +124,7 @@ div.center {
 img.error {
 	display: block;
 	height: 250px;
+	width: auto;
 	border: none;
 	opacity: 1.0;
 	filter: alpha(opacity = 100);
