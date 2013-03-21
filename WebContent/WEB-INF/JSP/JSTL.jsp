@@ -50,7 +50,7 @@
 					<td>${auto.merk}</td>
 					<td>${auto.model}</td>
 					<td>${auto.motor}</td>
-					<td>${auto.prijs} &dollar;</td>
+					<td>${auto.prijs} &#36;</td>
 				</tr>
 
 			</c:forEach>
@@ -78,7 +78,7 @@
 					<td>${auto.value.merk}</td>
 					<td>${auto.value.model}</td>
 					<td>${auto.value.motor}</td>
-					<td>${auto.value.prijs} &dollar;</td>
+					<td>${auto.value.prijs} &#36;</td>
 				</tr>
 
 			</c:forEach>
