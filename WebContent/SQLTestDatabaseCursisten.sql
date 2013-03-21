@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `jsp_en_servlets_testschema` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE  IF NOT EXISTS `jsp_en_servlets_testschema` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `jsp_en_servlets_testschema`;
 -- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
 --
@@ -29,7 +29,7 @@ CREATE TABLE `cursis` (
   `naam` varchar(45) NOT NULL,
   `jaar` year(4) NOT NULL,
   PRIMARY KEY (`idCursis`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,7 +56,7 @@ CREATE TABLE `cursist` (
   PRIMARY KEY (`idCursist`),
   KEY `gevolgdeCursis_idx` (`cursis`),
   CONSTRAINT `gevolgdeCursis` FOREIGN KEY (`cursis`) REFERENCES `cursis` (`idCursis`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

@@ -1,1 +1,1 @@
-<h2>Ik ben geimporteerd vanuit een apart jsp bestand</h2>
+<h2>Ik ben gemporteerd vanuit een apart jsp bestand</h2>

@@ -44,7 +44,7 @@
     <location>/WEB-INF/JSP/404.jsp</location>
   </error-page>
   <error-page>
-    <exception-type>java.lang.NullPointerException</exception-type>
+    <exception-type>java.lang.Exception</exception-type>
     <location>/LogNullPointerServlet</location>
   </error-page>
 </web-app>

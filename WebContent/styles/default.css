@@ -1,172 +1,179 @@
 body {
-	
-    background-color : #000000 ;
-    font-family : Calibri ;
-    font-size : 20px ;
-    color : #FFFFFF ;
-    text-align : center ;
-
-} 
+	background-color: #000000;
+	font-family: Calibri;
+	font-size: 20px;
+	color: #FFFFFF;
+	text-align: center;
+}
 
 li.even {
-	
-	color : #006699 ;
-	
+	color: #006699;
 }
 
 li.oneven {
-	
-	color : #009999 ;
-	
+	color: #009999;
 }
 
 h1 {
-	
-	font-family : Calibri ;
-	color : #FFFFFF ;	
-	margin-right : auto ;
-	text-align : center ;
-
+	font-family: Calibri;
+	color: #FFFFFF;
+	margin-right: auto;
+	text-align: center;
 }
 
-
 .button {
-	
-	background-color : #5195CE ;
-	-moz-border-radius : 15px ;
-	-webkit-border-radius : 15px ;
-	border-radius : 15px ;
-	border : 1px solid #FDFDFD ;
-	color : #FFFFFF ;
-	text-decoration : none ;
-	padding : 5px ;
-	width : 350px ;
-	display : block ;
-	margin-bottom : 5px ; 
-	margin-left : auto ;
- 	margin-right : auto ;
-	text-align : center ;
-	
+	background-color: #5195CE;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: 1px solid #FDFDFD;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 5px;
+	width: 350px;
+	display: block;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 .button:active {
-	
-	position : relative;
-	top : 1px;
-	
+	position: relative;
+	top: 1px;
 }
 
 .button:hover {
-	
-	background : #005DB3 ;
-	
+	background: #005DB3;
 }
 
 .HPbutton {
-	
-	background-color : #AAAAAA ;
-	-moz-border-radius : 15px ;
-	-webkit-border-radius : 15px ;
-	border-radius : 15px ;
-	border : 1px solid #FDFDFD ;
-	color : #FFFFFF ;
-	text-decoration : none ;
-	padding : 5px ;
-	width : 350px ;
-	display : block ;
-	margin-bottom : 5px ; 
-	margin-left : auto ;
- 	margin-right : auto ;
-	text-align : center ;	
-	
+	background-color: #AAAAAA;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: 1px solid #FDFDFD;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 5px;
+	width: 350px;
+	display: block;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 .HPbutton:active {
-	
-	position : relative;
-	top : 1px;
-	
+	position: relative;
+	top: 1px;
 }
 
 .HPbutton:hover {
-	
-	background : #999999 ;
-	
+	background: #999999;
 }
 
 .input {
-	
-	background-color : #EEEEEE ;
-	border : 1px solid #FDFDFD ;
-	color : #000000 ;
-	text-decoration : none ;
-	padding : 5px ;
-	width : 350px ;
-	display : block ;
-	margin-bottom : 5px ; 
-	margin-left : auto ;
- 	margin-right : auto ;
-	text-align : center ;	
-	
+	background-color: #EEEEEE;
+	border: 1px solid #FDFDFD;
+	color: #000000;
+	font-family: Calibri;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 5px;
+	width: 350px;
+	display: block;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.submit {
+	background-color: #5195CE;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: 1px solid #FDFDFD;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 5px;
+	width: 100px;
+	display: block;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.submit:active {
+	position: relative;
+	top: 1px;
+}
+
+.submit:hover {
+	background: #005DB3;
 }
 
 div.center {
-	
-	width : 700px ;	
-	margin-left : auto ;
- 	margin-right : auto ;
-	
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-img  {
-	
-  border : 4px solid #E9E9EC ;
-  height : 100px ;
-  margin-left : auto ;
-  margin-right : auto ;
-  text-align : center ;
-  display : block ;
-  opacity : 0.8 ;
-  filter:alpha(opacity=80);
-  
+img.error {
+	display: block;
+	height: 250px;
+	border: none;
+	opacity: 1.0;
+	filter: alpha(opacity = 100);
 }
-  
+
+img {
+	border: 4px solid #E9E9EC;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: block;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+}
+
 img:hover {
-  
-  opacity:1.0;
-  filter:alpha(opacity=100);
-
+	opacity: 1.0;
+	filter: alpha(opacity = 100);
 }
 
 table {
-	
-	background-color : #5195CE ;
-	text-align : center ;
-	width : 700px ;
-	margin-left: auto ; 
-    margin-right: auto ;
-    border : none ;
-	
+	background-color: #5195CE;
+	text-align: center;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
 }
 
-td , th {
-	
-	border : 2px dotted #E9E9EC ;
-		
+td,th {
+	border: 2px dotted #E9E9EC;
 }
 
-td:hover , th:hover {
-	
-		background-color : #61A5DE ;
-		
+td:hover,th:hover {
+	background-color: #61A5DE;
+}
+
+td.noBorder {
+	border: none;
+}
+
+td.noBorder:hover {
+	background-color: #5195CE;
 }
 
 li {
-	
-	width : 700px ;
-	list-style-type : square ;
-	text-align : center ;
-	margin-left : auto ;
-	margin-right : auto ;
-		
+	width: 700px;
+	list-style-type: square;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }

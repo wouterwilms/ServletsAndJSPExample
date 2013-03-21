@@ -9,7 +9,7 @@ type="javax.sql.DataSource"
 
 driverClassName="com.mysql.jdbc.Driver"
 
-url="jdbc:mysql://172.16.34.2:3306/jsp_en_servlets_testschema"
+url="jdbc:mysql://localhost:3306/jsp_en_servlets_testschema"
 
 username="cursist"
 

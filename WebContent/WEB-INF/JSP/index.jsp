@@ -63,7 +63,7 @@
 
 <c:url var="nullPointer" value="/NullPointerServlet"/>
 
-<a href="${nullPointer}" class="button">Throw a java.lang.NullPointerException</a>
+<a href="${nullPointer}" class="button">Throw an Exception</a>
 
 <c:url var="cursisten" value="/CursistServlet"/>
 

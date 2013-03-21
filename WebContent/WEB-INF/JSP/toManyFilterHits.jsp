@@ -1,21 +1,25 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" session="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
         
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html>
 
 <html>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="styles/default.css">
 <title>Filter Voorbeeld (to many hits!)</title>
 </head>
+
 <body>
 
 <h1>To many Filter Hits: restart server</h1>
 
 <c:url var="index" value="/IndexServlet"/>
 
-<a href="${index}">Home Page</a>
+<a class="HPbutton" href="${index}">Home Page</a>
 
 </body>
+
 </html>

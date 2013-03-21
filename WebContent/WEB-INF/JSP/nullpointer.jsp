@@ -2,26 +2,29 @@
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<!DOCTYPE html>
+<!doctype html>
 
-<html lang="nl">
+<html>
+
 <head>
-<title>Null Pointer Exception ! </title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="styles/default.css">
+<title>Exception ! </title>
 </head>
+
 <body>
 
-<h1>Null pointer Exception !</h1>
-
+<h1>Exception !</h1>
 
 <c:url var="foutFoto" value="/images/bug.png"/>
 
-<img src="${foutFoto}" alt="bug"/>
+<img class="error" src="${foutFoto}" alt="bug"/>
 
 <p>De programmeur heeft een domme fout gemaakt of u bent het slachtoffer van een bug</p>
 
 <c:url var="index" value="/IndexServlet"/>
 
-<a href="${index}">Home Page</a>
+<a class="HPbutton" href="${index}">Home Page</a>
 
 </body>
 </html>
