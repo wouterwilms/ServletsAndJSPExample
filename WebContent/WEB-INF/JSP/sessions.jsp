@@ -13,15 +13,13 @@
 
 <body>
 
-<ul>
-
 <c:forEach var="string" items="${lijst}">
 
 <li>${string}</li>
 
 </c:forEach>
 
-</ul>
+<br/>
 
 <c:url var="postURL" value="/Sessions"/>
 

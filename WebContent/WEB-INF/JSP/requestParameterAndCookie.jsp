@@ -9,7 +9,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="styles/default.css">
-<title>RequestParameters & Cookies</title>
+<title>RequestParameters en Cookies</title>
 </head>
 
 <body>

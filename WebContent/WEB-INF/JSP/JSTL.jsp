@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" session="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!-- 
  	Dit is een taglib directive : hiermee laat je weten dat je de core 
@@ -14,19 +13,19 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="styles/default.css">
 <title>JSTL Expample</title>
 </head>
 
 <body>
 
-<div class="center">
+	<div class="center">
 
-	<h2>
-		<c:out value="<c:forEach>" />
-		om over een verzameling itereren
-	</h2>
+		<h2>
+			<c:out value="<c:forEach>" />
+			om over een verzameling itereren
+		</h2>
 
 		<c:forEach var="instructeur" items="${instructeurs}">
 
@@ -34,59 +33,59 @@
 
 		</c:forEach>
 
-	<h2>Over een verzameling JavaBeans itereren</h2>
+		<h2>Over een verzameling JavaBeans itereren</h2>
 
-	<table border=1>
-
-		<tr>
-			<th>Merk</th>
-			<th>Model</th>
-			<th>Motor</th>
-			<th>Prijs</th>
-		</tr>
-
-		<c:forEach var="auto" items="${collectie}">
+		<table border=1>
 
 			<tr>
-				<td>${auto.merk}</td>
-				<td>${auto.model}</td>
-				<td>${auto.motor}</td>
-				<td>${auto.prijs} &dollar;</td>
+				<th>Merk</th>
+				<th>Model</th>
+				<th>Motor</th>
+				<th>Prijs</th>
 			</tr>
 
-		</c:forEach>
+			<c:forEach var="auto" items="${collectie}">
 
-	</table>
+				<tr>
+					<td>${auto.merk}</td>
+					<td>${auto.model}</td>
+					<td>${auto.motor}</td>
+					<td>${auto.prijs} &dollar;</td>
+				</tr>
 
-	<h2>Over een map itereren</h2>
+			</c:forEach>
 
-	<table border=1>
+		</table>
 
-		<tr>
-			<th>Key <br />(owner)
-			</th>
-			<th>Merk</th>
-			<th>Model</th>
-			<th>Motor</th>
-			<th>Prijs</th>
-		</tr>
+		<h2>Over een map itereren</h2>
 
-		<c:forEach var="auto" items="${collectieMap}" begin="0" step="1"
-			end="2">
+		<table border=1>
 
 			<tr>
-				<td>${auto.key}</td>
-				<td>${auto.value.merk}</td>
-				<td>${auto.value.model}</td>
-				<td>${auto.value.motor}</td>
-				<td>${auto.value.prijs} &dollar;</td>
+				<th>Key <br />(owner)
+				</th>
+				<th>Merk</th>
+				<th>Model</th>
+				<th>Motor</th>
+				<th>Prijs</th>
 			</tr>
 
-		</c:forEach>
+			<c:forEach var="auto" items="${collectieMap}" begin="0" step="1"
+				end="2">
 
-	</table>
+				<tr>
+					<td>${auto.key}</td>
+					<td>${auto.value.merk}</td>
+					<td>${auto.value.model}</td>
+					<td>${auto.value.motor}</td>
+					<td>${auto.value.prijs} &dollar;</td>
+				</tr>
 
-	<h2>De forEach attributen 'begin', 'step' en 'end'</h2>
+			</c:forEach>
+
+		</table>
+
+		<h2>forEach attributen 'begin', 'step' en 'end'</h2>
 
 
 		<c:forEach begin="1" step="2" end="5">
@@ -94,103 +93,101 @@
 		</c:forEach>
 
 
-	<h2>Het forEach attribuut 'varStatus'</h2>
+		<h2>Het forEach attribuut 'varStatus'</h2>
 
-	<table border=1>
+		<table border=1>
 
-		<tr>
-			<th>status.count</th>
-			<th>status.index</th>
-			<th>status.first</th>
-			<th>status.last</th>
-		</tr>
-		<c:forEach begin="5" step="3" end="15" varStatus="status">
 			<tr>
-				<td>${status.count}</td>
-				<td>${status.index}</td>
-				<td>${status.first}</td>
-				<td>${status.last}</td>
+				<th>status.count</th>
+				<th>status.index</th>
+				<th>status.first</th>
+				<th>status.last</th>
 			</tr>
+			<c:forEach begin="5" step="3" end="15" varStatus="status">
+				<tr>
+					<td>${status.count}</td>
+					<td>${status.index}</td>
+					<td>${status.first}</td>
+					<td>${status.last}</td>
+				</tr>
+			</c:forEach>
+
+		</table>
+
+		<h2>varStatus gebruiken voor afwisselende kleuren</h2>
+
+		<c:forEach begin="0" end="5" varStatus="status">
+
+			<li class="${status.count % 2 == 0 ? 'even' : 'oneven'}">
+				${status.count % 2 == 0 ? 'even' : 'oneven'}</li>
+
 		</c:forEach>
 
-	</table>
+		<h2>
+			<c:out value="<c:if>" />
+			tag voorbeeld
+		</h2>
 
-	<h2>varStatus gebruiken voor afwisselende kleuren</h2>
+		<c:if test="${'Ferrari' == collectie[0].merk}">
+		de eerste auto is een Ferrari !
+		</c:if>
 
-	<c:forEach begin="0" end="5" varStatus="status">
+		<h2>
+			<c:out value="<c:choose>" />
+			en
+			<c:out value="<c:when>" />
+			tag voorbeeld
+		</h2>
 
-		<li class="${status.count % 2 == 0 ? 'even' : 'oneven'}">
-			${status.count % 2 == 0 ? 'even' : 'oneven'}</li>
+		<c:forEach var="auto" items="${collectie}" varStatus="status">
 
-	</c:forEach>
+			<li><c:choose>
 
-	<h2>
-		<c:out value="<c:if>" />
-		tag voorbeeld
-	</h2>
-
-	<c:if test="${'Ferrari' == collectie[0].merk}">
-	de eerste auto is een Ferrari !
-	</c:if>
-
-	<h2>
-		<c:out value="<c:choose>" />
-		en
-		<c:out value="<c:when>" />
-		tag voorbeeld
-	</h2>
-
-	<c:forEach var="auto" items="${collectie}" varStatus="status">
-
-		<li><c:choose>
-
-				<c:when test="${auto.merk == 'Ferrari'}">
+					<c:when test="${auto.merk == 'Ferrari'}">
 	
 	Element ${status.index} is een Ferrari 
 	
 	</c:when>
 
-				<c:when test="${auto.merk == 'Aston Martin'}">
+					<c:when test="${auto.merk == 'Aston Martin'}">
 	
 	Element ${status.index} is een Aston Martin
 		
 	</c:when>
 
-				<c:when test="${auto.merk == 'Pagani'}">
+					<c:when test="${auto.merk == 'Pagani'}">
 	
 	Element ${status.index} is een Pagani
 		
 	</c:when>
 
-			</c:choose></li>
+				</c:choose></li>
 
-	</c:forEach>
+		</c:forEach>
 
-	<c:import url="/WEB-INF/JSP/teImporterenJSP.jsp" />
+		<c:import url="/WEB-INF/JSP/teImporterenJSP.jsp" />
 
-	<c:set var="eenVariabeleDieGesetIs"
-		value='ik ben gemaakt door een c:set tag!' />
+		<c:set var="eenVariabeleDieGesetIs"
+			value='ik ben gemaakt door een c:set tag!' />
 
-	<h2>${eenVariabeleDieGesetIs}</h2>
+		<h2>${eenVariabeleDieGesetIs}</h2>
 
-	<h2>
-		<c:out value="<c:url>" />
-		tag voorbeeld
-	</h2>
+		<h2>
+			<c:out value="<c:url>" />
+			tag voorbeeld
+		</h2>
 
-	<c:url var="eenURL" value="/RedirectServlet">
-		<c:param name="eersteParameter" value="Eerste" />
-		<c:param name="tweedeParameter" value="Tweede" />
-	</c:url>
+		<c:url var="eenURL" value="/RedirectServlet">
+			<c:param name="eersteParameter" value="Eerste" />
+			<c:param name="tweedeParameter" value="Tweede" />
+		</c:url>
 
-	<a class="button" href="${eenURL}">Redirect Back !</a>
+		<a class="button" href="${eenURL}">Redirect Back !</a> <br />
 
-	<br/>
-	
-	<c:url var="index" value="/IndexServlet" />
+		<c:url var="index" value="/IndexServlet" />
 
-	<a class="HPbutton" href="${index}">Home Page</a>
-	
+		<a class="HPbutton" href="${index}">Home Page</a>
+
 	</div>
 
 </body>

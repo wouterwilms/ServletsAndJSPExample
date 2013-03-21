@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" session="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
         
@@ -7,7 +7,7 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="styles/default.css">
 <title>VoorbeelProject</title>
 </head>
@@ -16,11 +16,17 @@
 
 <div class="center">
 
-<c:url var="avatar" value="/images/GitHubAvatar.png" />
+<c:url var="avatar" value="/images/GitHubAvatar.png"/>
 
-<c:url var="git" value="https://github.com/VanbockryckInstructeur/ServletsAndJSPExample" />
+<c:url var="git" value="https://github.com/VanbockryckInstructeur/ServletsAndJSPExample"/>
 
 <a href="${git}"><img src="${avatar}" alt="avatar" title="GitHub repo"/></a>
+
+<c:url var="bucket" value="/images/Bitbucket.png"/>
+
+<c:url var="bit" value="https://bitbucket.org/pilongi/servletsandjspexample"/>
+
+<a href="${bit}"><img src="${bucket}" alt="bucket" title="Bitbucket repo"/></a>
 
 <!--  ${initParam.cursus} spreekt rechtstreeks de servlet context initparamter cursus aan (zie DD)-->
 <h1>${initParam.cursus}</h1>
