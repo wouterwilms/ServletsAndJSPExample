@@ -37,7 +37,7 @@
 
 		<table border=1>
 
-			<tr>
+			<tr class="top">
 				<th>Merk</th>
 				<th>Model</th>
 				<th>Motor</th>
@@ -50,7 +50,7 @@
 					<td>${auto.merk}</td>
 					<td>${auto.model}</td>
 					<td>${auto.motor}</td>
-					<td>${auto.prijs} &#36;</td>
+					<td class="right" >${auto.prijs} &#36;</td>
 				</tr>
 
 			</c:forEach>
@@ -61,7 +61,7 @@
 
 		<table border=1>
 
-			<tr>
+			<tr class = "top" >
 				<th>Key <br />(owner)
 				</th>
 				<th>Merk</th>
@@ -78,7 +78,7 @@
 					<td>${auto.value.merk}</td>
 					<td>${auto.value.model}</td>
 					<td>${auto.value.motor}</td>
-					<td>${auto.value.prijs} &#36;</td>
+					<td class="right" >${auto.value.prijs} &#36;</td>
 				</tr>
 
 			</c:forEach>
@@ -97,7 +97,7 @@
 
 		<table border=1>
 
-			<tr>
+			<tr class = "top" >
 				<th>status.count</th>
 				<th>status.index</th>
 				<th>status.first</th>
@@ -108,7 +108,7 @@
 					<td>${status.count}</td>
 					<td>${status.index}</td>
 					<td>${status.first}</td>
-					<td>${status.last}</td>
+					<td class="right" >${status.last}</td>
 				</tr>
 			</c:forEach>
 

@@ -152,11 +152,42 @@ table {
 	width: 700px;
 	margin-left: auto;
 	margin-right: auto;
-	border: none;
+	border-collapse: collapse;
+	border : none ;
+		
 }
 
-td,th {
-	border: 2px dotted #E9E9EC;
+tr.top {
+	
+	border : none ;
+	
+}
+
+tr {
+	
+	border : none;
+	border-top : 2px solid #E9E9EC;
+	
+	
+}
+
+td {
+	
+	border : none;
+	border-right : 2px solid #E9E9EC;
+	
+}
+
+th {
+	
+	border : none;
+		
+}
+
+td.right {
+	
+	border : none;
+		
 }
 
 td:hover,th:hover {
