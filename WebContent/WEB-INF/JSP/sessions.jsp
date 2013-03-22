@@ -46,7 +46,7 @@
 
 <c:url var="invalidateSessionURL" value="/Invalidate"/>
 
-<a class="button" href="${invalidateSessionURL}">Verwijder de session !</a><br/>
+<a class="button" href="${invalidateSessionURL}">Verwijder de huidige session !</a><br/>
 
 <c:url var="index" value="/IndexServlet"/>
 

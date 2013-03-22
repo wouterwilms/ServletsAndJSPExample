@@ -14,7 +14,7 @@
 
 <body>
 
-<h1>Number of current Sessions : ${numberOfSessions}</h1>
+<h1>Number of current Sessions : ${applicationScope['sessions'].size()}</h1>
 
 <c:url var="index" value="/IndexServlet"/>
 

@@ -31,19 +31,6 @@ public class HttpSessionListenerImplementation implements HttpSessionListener {
 		
 		sessions.add(event.getSession());
 		
-		Integer numberOfSessions = (Integer) servletContext
-				.getAttribute("numberOfSessions");
-
-		if (numberOfSessions == null) {
-
-			numberOfSessions = 0;
-
-		}
-
-		numberOfSessions++;
-				
-		servletContext.setAttribute("numberOfSessions", numberOfSessions);
-		
 		servletContext.setAttribute("sessions", sessions);
 
 		String id = event.getSession().getId();
@@ -59,13 +46,9 @@ public class HttpSessionListenerImplementation implements HttpSessionListener {
 		ArrayList<HttpSession> sessions = (ArrayList<HttpSession>) servletContext.getAttribute("sessions");
 		
 		sessions.remove(event.getSession());
-
-		Integer numberOfSessions = (Integer) servletContext
-				.getAttribute("numberOfSessions");
-
-		numberOfSessions--;
 		
-		servletContext.setAttribute("numberOfSessions", numberOfSessions);
+		servletContext.setAttribute("sessions", sessions);
+		
 		String id = event.getSession().getId();
 
 		System.out.println("A session was removed with id: " + id);

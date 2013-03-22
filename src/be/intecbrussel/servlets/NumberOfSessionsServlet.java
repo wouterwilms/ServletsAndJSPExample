@@ -27,23 +27,23 @@ public class NumberOfSessionsServlet extends HttpServlet {
 
 		RequestDispatcher dispatcher2 = request
 				.getRequestDispatcher("WEB-INF/JSP/toManySessions.jsp");
-
-		Integer numberOfSessions = (Integer) this.getServletContext()
-				.getAttribute("numberOfSessions");
 		
+		ArrayList<HttpSession> sessions = (ArrayList<HttpSession>) this.getServletContext().getAttribute("sessions");
 
-		if (numberOfSessions < 5) {
-
-			request.setAttribute("numberOfSessions", numberOfSessions);
+		if (sessions.size() < 5) {
 
 			dispatcher.forward(request, response);
 
-		} else {
-			
+		} else {			
 						
-			ArrayList<HttpSession> sessions = (ArrayList<HttpSession>) this.getServletContext().getAttribute("sessions");
 
-			sessions.removeAll(sessions);
+			for (int i = 0 ; i < sessions.size() ; i++ ) {
+				
+				sessions.get(i).invalidate();
+									
+			}
+					
+			this.getServletContext().removeAttribute("sessions");
 			
 			dispatcher2.forward(request, response);
 
