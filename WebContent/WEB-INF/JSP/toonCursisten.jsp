@@ -20,7 +20,7 @@
 
 	<table border=1>
 
-		<tr>
+		<tr class="top">
 
 			<th>ID</th>
 			<th>Naam</th>
@@ -34,7 +34,7 @@
 
 				<td>${cursist.idCursist}</td>
 				<td>${cursist.naam}</td>
-				<td>${cursist.cursisNummer}</td>
+				<td class="right">${cursist.cursisNummer}</td>
 
 			</tr>
 
@@ -48,7 +48,7 @@
 	
 		<table border=1>
 
-		<tr>
+		<tr class="top">
 
 			<th>ID</th>
 			<th>Naam</th>
@@ -62,7 +62,7 @@
 
 				<td>${cursist.idCursist}</td>
 				<td>${cursist.naam}</td>
-				<td>${cursist.cursisNummer}</td>
+				<td class="right">${cursist.cursisNummer}</td>
 
 			</tr>
 

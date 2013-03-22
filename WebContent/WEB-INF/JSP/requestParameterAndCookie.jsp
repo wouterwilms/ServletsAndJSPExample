@@ -47,20 +47,32 @@
 
 </form>
 
-<c:if test="${! empty meerwaardigeParameter}"><h1>De aangevinkte opties!</h1></c:if>
+<c:if test="${! empty meerwaardigeParameter}"><h1>De aangevinkte opties!</h1>
 
 <c:forEach var="item" items="${meerwaardigeParameter}">
 <li>${item}</li>
 </c:forEach>
+
+</c:if>
 
 <br/>
 
 <c:url var="cookieTestURL" value="/LeesCookieServlet"/>
 
 <a class="button" href="${cookieTestURL}">Heeft deze site een cookie geplaatst ?</a> 
-${cookieWaarde}<c:if test="${not empty cookie.testCookie.value && not empty cookieWaarde}">  ...en nog eens de value : "${cookie.testCookie.value}"</c:if>
 
 <br/>
+
+<c:if test="${not empty cookieWaarde}">
+
+${cookieWaarde}<c:if test="${not empty cookie.testCookie.value}">  ...en nog eens de value : "${cookie.testCookie.value}"</c:if>
+
+<br/><br/>
+
+</c:if>
+
+
+
 
 <c:url var="index" value="/IndexServlet"/>
 

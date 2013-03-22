@@ -26,7 +26,7 @@
 
 			<table border=1>
 
-				<tr>
+				<tr class="top">
 					<th>Titel</th>
 					<th>Prijs</th>
 					<th>Score</th>
@@ -63,7 +63,7 @@
 
 			<table border=1>
 
-				<tr>
+				<tr class="top">
 					<th>Titel</th>
 					<th>Prijs</th>
 					<th>Score</th>

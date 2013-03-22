@@ -1,7 +1,10 @@
 package be.intecbrussel.listeners;
 
+import java.util.ArrayList;
+
 import javax.servlet.ServletContext;
 import javax.servlet.annotation.WebListener;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
@@ -10,7 +13,7 @@ import javax.servlet.http.HttpSessionListener;
  * HttpSessionEvent. Deze klasse bevat de volgende methodes :
  * +getSession(): HttpSession
  */
-
+@SuppressWarnings("unchecked")
 @WebListener
 public class HttpSessionListenerImplementation implements HttpSessionListener {
 
@@ -18,6 +21,16 @@ public class HttpSessionListenerImplementation implements HttpSessionListener {
 
 		ServletContext servletContext = event.getSession().getServletContext();
 
+		ArrayList<HttpSession> sessions = (ArrayList<HttpSession>) servletContext.getAttribute("sessions");
+		
+		if (sessions == null) {
+			
+			sessions = new ArrayList<HttpSession>();
+			
+		}
+		
+		sessions.add(event.getSession());
+		
 		Integer numberOfSessions = (Integer) servletContext
 				.getAttribute("numberOfSessions");
 
@@ -28,10 +41,10 @@ public class HttpSessionListenerImplementation implements HttpSessionListener {
 		}
 
 		numberOfSessions++;
-		
-		System.out.println(numberOfSessions);
-
+				
 		servletContext.setAttribute("numberOfSessions", numberOfSessions);
+		
+		servletContext.setAttribute("sessions", sessions);
 
 		String id = event.getSession().getId();
 
@@ -42,20 +55,16 @@ public class HttpSessionListenerImplementation implements HttpSessionListener {
 	public void sessionDestroyed(HttpSessionEvent event) {
 
 		ServletContext servletContext = event.getSession().getServletContext();
+		
+		ArrayList<HttpSession> sessions = (ArrayList<HttpSession>) servletContext.getAttribute("sessions");
+		
+		sessions.remove(event.getSession());
 
 		Integer numberOfSessions = (Integer) servletContext
 				.getAttribute("numberOfSessions");
 
-		if (numberOfSessions == null) {
-
-			numberOfSessions = 0;
-
-		}
-
 		numberOfSessions--;
 		
-		System.out.println(numberOfSessions);
-
 		servletContext.setAttribute("numberOfSessions", numberOfSessions);
 		String id = event.getSession().getId();
 

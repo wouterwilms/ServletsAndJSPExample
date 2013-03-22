@@ -195,7 +195,10 @@ td:hover,th:hover {
 }
 
 td.noBorder {
+	
 	border: none;
+	border-top : 2px solid #5195CE;
+
 }
 
 td.noBorder:hover {
