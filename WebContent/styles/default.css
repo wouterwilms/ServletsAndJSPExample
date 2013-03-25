@@ -6,6 +6,23 @@ body {
 	text-align: center;
 }
 
+div.title {
+	background-color: #EFEFEF;
+	color: #005DB3;
+	border-radius: 0px 0px 15px 15px;
+	-moz-border-radius: 0px 0px 15px 15px;
+	-webkit-border-radius: 0px 0px 15px 15px;
+	font-family: Calibri;
+	font-size: 40px;
+	font-weight: bold;
+	top: 0px;
+	margin-top: -50px; width : 400px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px; margin-left : auto; margin-right : auto;
+	height: 80px;
+}
+
 li.even {
 	color: #006699;
 }
@@ -73,6 +90,66 @@ h1 {
 	background: #999999;
 }
 
+.logout {
+	background-color: #5195CE;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: 1px solid #FDFDFD;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-family: Calibri; font-size : 25px;
+	font-weight: bold; padding : 5px;
+	width: 200px;
+	height: 50px; display : block;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: block;
+	padding: 5px;
+	font-size: 25px
+}
+
+.logout:active {
+	position: relative;
+	top: 1px;
+}
+
+.logout:hover {
+	background: #A30000;
+}
+
+.login {
+	background-color: #5195CE;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: 1px solid #FDFDFD;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-family: Calibri; font-size : 25px;
+	font-weight: bold; padding : 5px;
+	width: 200px;
+	height: 50px; display : block;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: block;
+	padding: 5px;
+	font-size: 25px
+}
+
+.login:active {
+	position: relative;
+	top: 1px;
+}
+
+.login:hover {
+	background: #33CC33;
+}
+
 .input {
 	background-color: #EEEEEE;
 	border: 1px solid #FDFDFD;
@@ -127,23 +204,23 @@ img.error {
 	width: auto;
 	border: none;
 	opacity: 1.0;
-	filter: alpha(opacity = 100);
+	filter: alpha(opacity =       100);
 }
 
 img {
-	border: none ;
+	border: none;
 	width: 80px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 	display: inline;
 	opacity: 0.8;
-	filter: alpha(opacity = 80);
+	filter: alpha(opacity =       80);
 }
 
 img:hover {
 	opacity: 1.0;
-	filter: alpha(opacity = 100);
+	filter: alpha(opacity =       100);
 }
 
 table {
@@ -153,41 +230,29 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 	border-collapse: collapse;
-	border : none ;
-		
+	border: none;
 }
 
 tr.top {
-	
-	border : none ;
-	
+	border: none;
 }
 
 tr {
-	
-	border : none;
-	border-top : 2px solid #E9E9EC;
-	
-	
+	border: none;
+	border-top: 2px solid #E9E9EC;
 }
 
 td {
-	
-	border : none;
-	border-right : 2px solid #E9E9EC;
-	
+	border: none;
+	border-right: 2px solid #E9E9EC;
 }
 
 th {
-	
-	border : none;
-		
+	border: none;
 }
 
 td.right {
-	
-	border : none;
-		
+	border: none;
 }
 
 td:hover,th:hover {
@@ -195,10 +260,8 @@ td:hover,th:hover {
 }
 
 td.noBorder {
-	
 	border: none;
-	border-top : 2px solid #5195CE;
-
+	border-top: 2px solid #5195CE;
 }
 
 td.noBorder:hover {

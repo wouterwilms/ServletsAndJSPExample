@@ -85,6 +85,18 @@
 
 <a href="${SQL}" class="HPbutton">Download .sql script voor DB</a>
 
+<br/>
+
+<c:url var="logout" value="/LogOut"/>
+
+<form action="${logout}" method="GET">
+
+<input type="submit" class="logout" value="Log Out"/>
+
+</form>
+
+
+
 <h1>${initParam.nieuwAttribuut}</h1>
 
 </div>

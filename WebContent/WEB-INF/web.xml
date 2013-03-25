@@ -1,50 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>ServletsAndJSPExampleProject</display-name>
-  <welcome-file-list>
-    <welcome-file>IndexServlet</welcome-file>
-  </welcome-file-list>
-  <session-config>
-    <session-timeout>100</session-timeout>
-  </session-config>
-  <servlet>
-    <servlet-name>initDestroyVoorbeeld</servlet-name>
-    <servlet-class>be.intecbrussel.servlets.InitDestroyVoorbeeld</servlet-class>
-    <init-param>
-      <param-name>cursus</param-name>
-      <param-value>Java : Servlets en JSP</param-value>
-    </init-param>
-    <init-param>
-      <param-name>aantalCursisten</param-name>
-      <param-value>6</param-value>
-    </init-param>
-  </servlet>
-  <context-param>
-    <param-name>opleidingsCentrum</param-name>
-    <param-value>INTEC Brussel</param-value>
-  </context-param>
-  <context-param>
-    <param-name>cursus</param-name>
-    <param-value>Servlets en JSP</param-value>
-  </context-param>
-  <filter>
-    <filter-name>filter1</filter-name>
-    <filter-class>be.intecbrussel.filters.VoorbeeldFilter</filter-class>
-    <init-param>
-      <param-name>attribuutTekst</param-name>
-      <param-value>Aantal hits voor filter1 :</param-value>
-    </init-param>
-  </filter>
-  <filter-mapping>
-    <filter-name>filter1</filter-name>
-    <url-pattern>/voorbeeldFilter</url-pattern>
-  </filter-mapping>
-  <error-page>
-    <error-code>404</error-code>
-    <location>/WEB-INF/JSP/404.jsp</location>
-  </error-page>
-  <error-page>
-    <exception-type>java.lang.Exception</exception-type>
-    <location>/LogNullPointerServlet</location>
-  </error-page>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>ServletsAndJSPExampleProject</display-name>
+	<welcome-file-list>
+		<welcome-file>IndexServlet</welcome-file>
+	</welcome-file-list>
+	<session-config>
+		<session-timeout>100</session-timeout>
+	</session-config>
+	<servlet>
+		<servlet-name>initDestroyVoorbeeld</servlet-name>
+		<servlet-class>be.intecbrussel.servlets.InitDestroyVoorbeeld</servlet-class>
+		<init-param>
+			<param-name>cursus</param-name>
+			<param-value>Java : Servlets en JSP</param-value>
+		</init-param>
+		<init-param>
+			<param-name>aantalCursisten</param-name>
+			<param-value>6</param-value>
+		</init-param>
+	</servlet>
+	<context-param>
+		<param-name>opleidingsCentrum</param-name>
+		<param-value>INTEC Brussel</param-value>
+	</context-param>
+	<context-param>
+		<param-name>cursus</param-name>
+		<param-value>Servlets en JSP</param-value>
+	</context-param>
+	<filter>
+		<filter-name>filter1</filter-name>
+		<filter-class>be.intecbrussel.filters.VoorbeeldFilter</filter-class>
+		<init-param>
+			<param-name>attribuutTekst</param-name>
+			<param-value>Aantal hits voor filter1 :</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>filter1</filter-name>
+		<url-pattern>/voorbeeldFilter</url-pattern>
+	</filter-mapping>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/JSP/404.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/LogNullPointerServlet</location>
+	</error-page>
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/login.html</form-login-page>
+			<form-error-page>/error.html</form-error-page>
+		</form-login-config>
+	</login-config>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>styles</web-resource-name>
+			<url-pattern>/styles/*</url-pattern>
+		</web-resource-collection>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Everything</web-resource-name>
+			<url-pattern>/</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>user</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-role>
+		<role-name>user</role-name>
+	</security-role>
+
 </web-app>
