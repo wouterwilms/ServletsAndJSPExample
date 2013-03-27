@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `jsp_en_servlets_testschema` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE  IF NOT EXISTS `jsp_en_servlets_testschema` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `jsp_en_servlets_testschema`;
 -- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
 --
@@ -29,7 +29,7 @@ CREATE TABLE `cursis` (
   `naam` varchar(45) NOT NULL,
   `jaar` year(4) NOT NULL,
   PRIMARY KEY (`idCursis`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,7 +56,7 @@ CREATE TABLE `cursist` (
   PRIMARY KEY (`idCursist`),
   KEY `gevolgdeCursis_idx` (`cursis`),
   CONSTRAINT `gevolgdeCursis` FOREIGN KEY (`cursis`) REFERENCES `cursis` (`idCursis`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,6 +68,31 @@ LOCK TABLES `cursist` WRITE;
 INSERT INTO `cursist` VALUES (1,'Georges',1),(2,'Lennert',1),(3,'Serguei',1),(4,'Shadi',1),(5,'Tom',1),(6,'Wouter',1);
 /*!40000 ALTER TABLE `cursist` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `idusers` int(11) NOT NULL AUTO_INCREMENT,
+  `userName` varchar(45) NOT NULL,
+  `userPW` varchar(45) NOT NULL,
+  PRIMARY KEY (`idusers`),
+  UNIQUE KEY `userName_UNIQUE` (`userName`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -78,4 +103,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-03-19 14:14:05
+-- Dump completed on 2013-03-27 15:22:58
