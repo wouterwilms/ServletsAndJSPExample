@@ -79,6 +79,10 @@
 
 <a href="${UTF}" class="button">Text to UTF-8 binairy printer</a>
 
+<c:url var="secret" value="/SecretPart"/>
+
+<a href="${secret}" class="button">User Area</a>
+
 <br/>
 
 <c:url var="SQL" value="/SQLTestDatabaseCursisten.sql"/>
