@@ -34,15 +34,15 @@ public class SecurityFilter implements Filter {
 	// Met deze boolean geven we aan of er al dan niet een cookie
 	// aanwezig is die de gebruiker toegang geeft tot het beveiligd
 	// onderdeel.
-	private boolean securityCookieOK = false;
+	private boolean securityCookieOK;
 
 	// Met deze boolean geven we aan of een gebruikersnaam gevonden is
 	// in de gebruikers DB
-	private boolean found = false;
+	private boolean found;
 
 	// Met deze boolean geven we aan of die gebruiker ook toegang krijgt
 	// tot het beveiligd deel (dat het meegegeven paswoord ook correct is)
-	private boolean acces = false;
+	private boolean acces;
 
 	public SecurityFilter() {
 
@@ -59,6 +59,11 @@ public class SecurityFilter implements Filter {
 		// In dit gedeelte doen we wat voorbereiding
 		// ==============================================
 
+		// initieel zetten we de al de controles op false
+		securityCookieOK = false;
+		found = false;
+		acces = false;
+		
 		// Als de security check faalt gaan we redirecten naar een login
 		// venster met de volgende URL.
 		final String REDIRECT_URL = request.getServletContext()
