@@ -9,7 +9,7 @@ public class Security {
 	// Als je een hash maakt van een String 
 	// heb je een zekere veiligheid.
 	// Als je een hash maakt van een hash van
-	// een string heb je meer veilegheid.
+	// een string heb je meer veiligheid.
 	// als je een hash maakt van een hash van
 	// een hash van een string heb je nog meer
 	// veiligheid... enz.
@@ -28,7 +28,7 @@ public class Security {
 
 	}
 
-	// de heaveHash hashed tien keer
+	// de heavyHash hashed tien keer
 	public String heavyHash(String bron) {
 
 		for (int i = 0; i < 10; i++) {

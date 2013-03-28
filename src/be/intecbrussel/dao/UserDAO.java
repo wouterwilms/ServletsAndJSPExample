@@ -86,7 +86,7 @@ public class UserDAO {
 	private User resultSetRijNaarUser(ResultSet resultSet) throws SQLException {
 
 		resultSet.next();
-
+		
 		return new User(resultSet.getInt("idUsers"),
 				resultSet.getString("userName"), resultSet.getString("userPW"));
 	}

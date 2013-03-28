@@ -153,6 +153,8 @@ public class SecurityFilter implements Filter {
 				} catch (DAOException ex) {
 
 					System.out.println(ex.getMessage());
+					
+					System.out.println(ex.getCause().getMessage());
 
 				}
 				
