@@ -4,7 +4,18 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class Security {
+	
+	
+	// Als je een hash maakt van een String 
+	// heb je een zekere veiligheid.
+	// Als je een hash maakt van een hash van
+	// een string heb je meer veilegheid.
+	// als je een hash maakt van een hash van
+	// een hash van een string heb je nog meer
+	// veiligheid... enz.
 
+	
+	// de lightHash hashed 'slechts' twee keer
 	public String lightHash(String bron) {
 
 		for (int i = 0; i < 2; i++) {
@@ -17,6 +28,7 @@ public class Security {
 
 	}
 
+	// de heaveHash hashed tien keer
 	public String heavyHash(String bron) {
 
 		for (int i = 0; i < 10; i++) {
@@ -28,7 +40,10 @@ public class Security {
 		return bron;
 
 	}
-
+	
+	// de hashfunctie (deze code moet je niet begrijpen)
+	// Hier word een MD5 hash gemaakt van een meegeven
+	// String.
 	public String md5(String bron) {
 
 		StringBuffer sb = null;

@@ -22,7 +22,11 @@ public class RegisterServlet extends HttpServlet {
 	
 	private static final String VIEW = "/WEB-INF/JSP/userRegister.jsp";
 	
+	// om de user toe te voegen hebben we een UserDAO nodig
 	private final UserDAO userDAO = new UserDAO();
+	
+	// een boolean om aan te geven dat het toevoegen mislukt is
+	private boolean addError = false;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -34,30 +38,42 @@ public class RegisterServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		boolean addError = false;
-		
+		// De userName opvragen
 		String userName = request.getParameter("registerUserName");
 		
+		// Het paswoord opvragen
 		String pwd = request.getParameter("registerPassword");
 		
+		// Proberen om met deze gegevens een nieuwe gebruiker 
+		// toe te voegen
 		try {
 		
+		// userDAO gebruiken om dit te proberen
 		userDAO.addOne(userName, pwd);
 		
 		} catch (DAOException ex) {
 			
+			// Als het toevoegen mislukt geven we dit aan
+			// (voor simpliciteit gaan we er van uit dat
+			// dit enkel kan gebeuren als de gebruikersnaam
+			// al bestaat, deze heeft namelijk een uniqueness
+			// constraint in de DB)
 			addError = true;
 			
 		}
 		
+		// Als het toevoegen is gelukt
 		if (!addError) {
-			
+					
+			// Sturen we de gebruiker naar de login pagina om in te loggen met zijn 
+			// nieuwe userName en Password
 			response.sendRedirect(request.getServletContext().getContextPath() + "/UserServlet");
 									
 		}
 		
 		else {
 			
+			// anders sturen we hem terug naar de registratie pagina met een foutmelding			
 			RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
 			
 			request.setAttribute("addError", true);
